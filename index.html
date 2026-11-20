@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Зёрна — кофейня</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #2d241e;
+      background: #f7f1e8;
+      line-height: 1.6;
+    }
+    header {
+      background: #3b2a20;
+      color: #fff8ef;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .logo { font-size: 25px; font-weight: bold; letter-spacing: 1px; }
+    nav { display: flex; gap: 22px; flex-wrap: wrap; }
+    nav a { color: #fff8ef; text-decoration: none; }
+    nav a:hover { color: #e6b978; }
+    .hero {
+      min-height: 420px;
+      padding: 75px 8%;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(110deg, #e8d3b8, #c18a58);
+    }
+    .hero-content { max-width: 620px; }
+    .hero h1 { font-size: clamp(38px, 6vw, 64px); line-height: 1.08; margin: 0 0 18px; }
+    .hero p { font-size: 19px; max-width: 500px; }
+    .button {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 13px 24px;
+      background: #3b2a20;
+      color: white;
+      text-decoration: none;
+      border-radius: 7px;
+    }
+    section { padding: 55px 8%; }
+    h2 { font-size: 32px; margin: 0 0 25px; }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .item {
+      background: #fffaf3;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px #4b332011;
+    }
+    .item .emoji { font-size: 38px; }
+    .price { color: #8a552e; font-weight: bold; }
+    .about { background: #eadbc8; }
+    footer {
+      padding: 25px 8%;
+      background: #3b2a20;
+      color: #fff8ef;
+      text-align: center;
+    }
+    @media (max-width: 700px) {
+      header { align-items: flex-start; flex-direction: column; }
+      nav { gap: 12px; }
+      .hero { min-height: 340px; padding: 55px 7%; }
+      .menu { grid-template-columns: 1fr; }
+      section { padding: 42px 7%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">☕ ЗЁРНА</div>
+    <nav>
+      <a href="#menu">Меню</a>
+      <a href="#about">О нас</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Тёплый кофе. Хороший день.</h1>
+        <p>Небольшая кофейня, где готовят ароматный кофе и создают уютную атмосферу.</p>
+        <a class="button" href="#menu">Посмотреть меню</a>
+      </div>
+    </section>
+
+    <section id="menu">
+      <h2>Наше меню</h2>
+      <div class="menu">
+        <article class="item">
+          <div class="emoji">☕</div>
+          <h3>Капучино</h3>
+          <p>Эспрессо с нежной молочной пеной.</p>
+          <p class="price">250 ₽</p>
+        </article>
+        <article class="item">
+          <div class="emoji">🥛</div>
+          <h3>Латте</h3>
+          <p>Мягкий кофейный вкус и много молока.</p>
+          <p class="price">280 ₽</p>
+        </article>
+        <article class="item">
+          <div class="emoji">🥐</div>
+          <h3>Круассан</h3>
+          <p>Свежая выпечка к любимому напитку.</p>
+          <p class="price">190 ₽</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2>Немного о нас</h2>
+      <p>«Зёрна» — место, куда можно зайти за чашкой кофе, встретиться с друзьями или спокойно поработать. Мы ценим простые вещи: вкусный кофе, свежую выпечку и гостеприимство.</p>
+    </section>
+
+    <section id="contacts">
+      <h2>Контакты</h2>
+      <p>Адрес: ул. Кофейная, 10</p>
+      <p>Время работы: ежедневно с 8:00 до 21:00</p>
+      <p>Телефон: +7 (900) 000-00-00</p>
+    </section>
+  </main>
+
+  <footer>© 2026 Кофейня «Зёрна»</footer>
+</body>
+</html>
